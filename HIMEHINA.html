@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HHDocument</title>
+    <!-- add roboto font style -->
+    <style>
+      font-face{ font-family:"roboto";
+      src(FONT/Roboto-Regular.ttf) ; }
+      div{
+        font-family:"roboto"; }
+    </style>
+    <style>
+      font-face{ font-family:"hauwen";
+      src(FONT/STXIHEI.TTF) ; }
+      div{
+        font-family:"huawen"; }
+    </style>
+    <!-- link resource -->
+    <link rel="stylesheet" href="himehina.css" />
+
+    <script src="himehina.js"></script>
+  </head>
+  <body>
+    <nav class="HH-nav sticky grid-2-colomn">
+      <div class="logo flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+        >
+          <image
+            id="图层_1"
+            data-name="图层 1"
+            x="7"
+            y="7"
+            width="37"
+            height="37"
+            xlink:href="data:img/png;base64,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"
+          />
+        </svg>
+        <span>HIMEHINA</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+        >
+          <image
+            id="图层_1"
+            data-name="图层 1"
+            x="7"
+            y="7"
+            width="37"
+            height="37"
+            xlink:href="data:img/png;base64,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"
+          />
+        </svg>
+      </div>
+      <ul class="nav-menu flex" style="list-style: none">
+        <li>
+          <a class="nav-menu-link" style="color: #f08c00" href="#">TOP</a>
+        </li>
+        <li><a class="nav-menu-link" href="#">NEWS</a></li>
+        <li><a class="nav-menu-link" href="#">ABOUT</a></li>
+        <li><a class="nav-menu-link" href="#">TALENT</a></li>
+        <li><a class="nav-menu-link" href="#">SCHEDULE</a></li>
+        <li><a class="nav-menu-link" href="#">EVENTS</a></li>
+        <li><a class="nav-menu-link" href="#">VIDEOS</a></li>
+        <li><a class="nav-menu-link" href="#">MUSIC</a></li>
+        <li><a class="nav-menu-link" href="#">GOODS</a></li>
+        <li><a class="nav-menu-link" href="#">SPECIAL</a></li>
+      </ul>
+    </nav>
+
+    <main class="flex-colomn">
+      <div class="model grid-2-colomn">
+        <div class="model-left grid-2-colomn">
+          <div class="show-list flex-colomn">
+            <img src="IMG/PNG/1.png" alt="himehian-img-1" />
+            <img src="IMG/PNG/2.png" alt="himehina-img-2" />
+          </div>
+          <div class="model-charactor relative">
+            <img
+              class="middle-position"
+              src="IMG/PNG/1.png"
+              alt="himehina-img-1"
+            />
+          </div>
+        </div>
+        <div class="model-right">
+          <div class="flex-colomn">
+            <div>
+              <span style="color: #fd5f8a; font-size: 30px; font-weight: bold">
+                田中ヒメ
+              </span>
+              <span style="color: #3eb8fd; font-size: 30px; font-weight: bold">
+                鈴木ヒナ
+              </span>
+            </div>
+            <div>
+              <span style="color: #fd5f8a; font-size: 15px"
+                >-Hime&nbsp;Tanaka-</span
+              ><span style="color: #3eb8fd; font-size: 15px"
+                >-Hina&nbsp;Suzuki-</span
+              >
+            </div>
+          </div>
+          <div class="introdece">
+            <p class="introduce-1">[気づくとぽんぽこムーブが漏れてしまう]</p>
+            <p class="introduce-2">
+              美しいブロンドヘアーがどことなく気品を漂わせるが、極度のアニメオタク。
+              本人はおしとやかに振舞っているつもりだが、感情を叫ぶようなハイトーンの歌声が特徴。
+            </p>
+          </div>
+
+          <video
+            class="model-right-video"
+            autoplay
+            muted
+            loop
+            src="VIDEO/1.mp4"
+          ></video>
+        </div>
+      </div>
+      <div class="recommended-videos">
+        <span class="flex">Recommended Videos</span>
+        <div class="recommended-videos-list grid-3-colomn">
+          <div class="video-box">
+            <video class="flex"  autoplay muted loop src="VIDEO/1.mp4"></video>
+            <span></span>
+          </div>
+       
+        <div class="video-box">
+          <video  class="flex" autoplay muted loop src="VIDEO/2.mp4"></video> 
+          <span></span>
+        </div>
+        <div class="video-box">
+          <video  class="flex" autoplay muted loop src="VIDEO/3.mp4"></video> 
+          <span></span>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>

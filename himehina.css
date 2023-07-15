@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto;
+  color: rgb(37, 37, 37);
+  line-height: 1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+span {
+  font-family: roboto;
+}
+/* ////////////////////////////////// */
+/* //////////////////////////////////// */
+/* //////////////////////////////////// */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-colomn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-2-colomn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-colomn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2-row {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.relative {
+  position: relative;
+}
+
+.middle-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ////////////////////////////////// */
+/* //////////////////////////////////// */
+/* //////////////////////////////////// */
+body {
+  background-image: url(IMG/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  /* align-items: center; */
+
+  margin-top: 9.6rem;
+  margin-bottom: 4.8rem;
+}
+/* ////////////////////// */
+/* ////////////////////////// */
+/* ////////////////// */
+/* /////////////////////////// */
+/* ///////////////////////////
+///////////////////////NAVVVVVV///////////////
+////////////////////////////*/
+.HH-nav {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  padding: 4.8rem 0 4.8rem 1.6rem;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  gap: 24rem;
+}
+
+.logo svg {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.logo span {
+  font-family: huawen;
+  font-size: 4.8rem;
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+
+.nav-menu {
+  gap: 2.4rem;
+  background-color: rgba(255, 255, 255, 0.429);
+  padding: 1.6rem 0.8rem;
+  border-radius: 10px;
+}
+
+.nav-menu-link:link,
+.nav-menu-link:visited {
+  color: #e67700;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: roboto;
+  cursor: pointer;
+  transition: all, 0.3;
+}
+
+.nav-menu-link:active,
+.nav-menu-link:hover {
+  color: #f08c00;
+}
+/* /////////////////////////// */
+/* ///////////////////////////
+//////////////////////////////////////
+////////////////////////////
+ */
+/* //////////////////////////////////
+/////////////////////////////////
+////////////////PARTONE/////////////
+/////////////////////////////////// */
+.model {
+  width: 100%;
+
+  margin: 9.6rem 0 9.6rem 0;
+}
+
+.model-left {
+  grid-template-columns: 1fr 4fr;
+}
+
+.model-left .show-list img {
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 50%;
+  border: 2px solid blue;
+  align-self: end;
+}
+
+.model-charactor {
+  position: relative;
+}
+
+.model-charactor img {
+  height: 64rem;
+}
+
+.model-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 2.4rem;
+  gap: 1.2rem;
+  margin-right: 8rem;
+  background-color: rgba(255, 255, 255, 0.852);
+}
+
+.introduce-1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+.introduce-2 {
+  font-weight: 550;
+  font-size: 1.6rem;
+  letter-spacing: -2px;
+}
+.model-right-video {
+  width: 100%;
+  border-radius: 5px;
+}
+/* //////////////////////////////////
+/////////////////////////////////
+////////////////PART TWO/////////////
+/////////////////////////////////// */ /* /////////////////////////// */
+/* ///////////////////////////
+//////////////////////////////////////
+////////////////////////////*/
+.recommended-videos {
+  padding: 4.8rem 0;
+  background-color: rgba(250, 250, 250, 0.881);
+  width: 100%;
+}
+
+.recommended-videos span {
+  font-size: 5.2rem;
+  margin-bottom: 2.4rem;
+  letter-spacing: 10px;
+  color: #36245a;
+  font-family: huawen;
+}
+
+.recommended-videos-list {
+  justify-items: center;
+  margin: 0 6.4rem;
+}
+
+.recommended-videos-list .video-box {
+  width: 32rem;
+  height: 16rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.recommended-videos-list .video-box video {
+  width: 100%;
+  position: center;
+  border-radius: 5px;
+}
