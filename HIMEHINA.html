@@ -11,6 +11,8 @@
       div{
         font-family:"roboto"; }
     </style>
+
+    <!-- add anthor font-family -->
     <style>
       font-face{ font-family:"hauwen";
       src(FONT/STXIHEI.TTF) ; }
@@ -20,9 +22,37 @@
     <!-- link resource -->
     <link rel="stylesheet" href="himehina.css" />
 
-    <script src="himehina.js"></script>
+    
+
+    <!-- header icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link icons resources -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   </head>
+<!-- //////////////////////////
+/////////////////////////
+/////////////////
+///////////////////////////////
+///////////////////////////////////////////
+  、、、、、、、、、、、、、、、
+  //////////////////////////////
+  ///////////////////////// -->
   <body>
+    <!-- music sources -->
+    <div class="music-resource">
+      <audio class="backgroundmusic" >
+        <source src="AUDIO/queencard.mp3"  type="audio/ogg">
+       </audio> 
+    </div>
     <nav class="HH-nav sticky grid-2-colomn">
       <div class="logo flex">
         <svg
@@ -74,6 +104,9 @@
         <li><a class="nav-menu-link" href="#">MUSIC</a></li>
         <li><a class="nav-menu-link" href="#">GOODS</a></li>
         <li><a class="nav-menu-link" href="#">SPECIAL</a></li>
+     <li>
+      <ion-icon class="backgroundmusic-icon" name="musical-notes-outline"></ion-icon>    
+    </li>
       </ul>
     </nav>
 
@@ -81,8 +114,23 @@
       <div class="model grid-2-colomn">
         <div class="model-left grid-2-colomn">
           <div class="show-list flex-colomn">
-            <img src="IMG/PNG/1.png" alt="himehian-img-1" />
-            <img src="IMG/PNG/2.png" alt="himehina-img-2" />
+
+            <div class="relative show-list-box flex " style="background-image: url(IMG/4.jpg);">
+              <svg class="icon-zoom" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+              </svg>
+             
+             
+            </div>
+            <div class="relative show-list-box flex " style="background-image: url(IMG/3.jpg);">
+              <svg class="icon-zoom" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+              </svg>
+              
+
+              
+              
+            </div>
           </div>
           <div class="model-charactor relative">
             <img
@@ -131,20 +179,22 @@
         <span class="flex">Recommended Videos</span>
         <div class="recommended-videos-list grid-3-colomn">
           <div class="video-box">
-            <video class="flex"  autoplay muted loop src="VIDEO/1.mp4"></video>
+            <video class="flex"  autoplay muted loop src="VIDEO/2.mp4"></video>
             <span></span>
           </div>
        
         <div class="video-box">
-          <video  class="flex" autoplay muted loop src="VIDEO/2.mp4"></video> 
+          <video  class="flex" autoplay muted loop src="VIDEO/5.mp4"></video> 
           <span></span>
         </div>
         <div class="video-box">
-          <video  class="flex" autoplay muted loop src="VIDEO/3.mp4"></video> 
+          <video  class="flex" autoplay muted loop src="VIDEO/4.mp4"></video> 
           <span></span>
         </div>
       </div>
 
     </main>
+
+    <script src="himehina.js"></script>
   </body>
 </html>
