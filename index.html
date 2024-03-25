@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HHDocument</title>
+    <!-- add roboto font style -->
+    <style>
+      font-face{ font-family:"roboto";
+      src(FONT/Roboto-Regular.ttf) ; }
+      div{
+        font-family:"roboto"; }
+    </style>
+
+    <!-- add anthor font-family -->
+    <style>
+      font-face{ font-family:"hauwen";
+      src(FONT/STXIHEI.TTF) ; }
+      div{
+        font-family:"huawen"; }
+    </style>
+    <!-- link resource -->
+    <link rel="stylesheet" href="himehina.css" />
+
+    <!-- header icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="IMG/favicon/favicon.png" />
+    <link rel="apple-touch-icon" href="IMG/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link icons resources -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- JAVASCRIPT LINK -->
+    <script defer src="himehina.js"></script>
+  </head>
+  <!-- //////////////////////////
+/////////////////////////
+/////////////////
+///////////////////////////////
+///////////////////////////////////////////
+  、、、、、、、、、、、、、、、
+  //////////////////////////////
+  ///////////////////////// -->
+  <body>
+    <!-- music sources -->
+    <div class="music-resource">
+      <audio loop class="backgroundmusic">
+        <source src="AUDIO/mikobakanano.mp3" type="audio/ogg" />
+      </audio>
+    </div>
+    <div class="viewP">
+      <nav class="nav sticky grid-2-column">
+        <div class="nav_logo flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+          >
+            <image
+              id="图层_1"
+              data-name="图层 1"
+              x="7"
+              y="7"
+              width="37"
+              height="37"
+              xlink:href="data:img/png;base64,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"
+            />
+          </svg>
+          <img src="IMG/PNG/3.png" alt="HIMEHINA.PNG" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+          >
+            <image
+              id="图层_1"
+              data-name="图层 1"
+              x="7"
+              y="7"
+              width="37"
+              height="37"
+              xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAHlElEQVRYhZWYC3DcVRXGf/tI2mx2k2w3D4pp0qZQQJQWOx2k0grKVMSiVZmCMso48iiMUB8dFRHt6KCjyAygtCANTCiCDGMLHbWlFQqmFqi2aYEhbU0fSRpsm/SVpDXZ3TTOWb9bb//dpOuZ+c/+H/fx3XPO/c53N/TDlmEKsVgEbuw7wqSefmsdB64ApgGTgCpgDDAI9AC7ga3ABqC/oAk8ixbS6IIxQ8zr6CY+mLkW+ApwDVBRQNdjwGpgOfDnQkGN6qlwCL6Q7WNq19G5wGJguvf5JLAHaAdKgcuAt4FDwAR5MOK13wJ8H1h3NlAjeqqu+CTzDhwKVfUNLAVu9z79C8gAXcB7wMvACeBF4CGF7zrgMFAvYJXAR4C1wBPAAi2qcE99IjLAVXu6G4A/ARfq9T5gFXCVpZjyKOZ1G7LxzMF67lP4zF4HPgpM1vN2wLy/Kx+osP8wrmiY2/oPGyBL4Hc8QL8HpgBlQArYL49kve4RbzwDeATYKXDlAvWsvl+o8af58x8sG8sL543/H6hLi7PcvbuLCYePm4c2e164F/iSri9rYAtX7SjhN4B18txK4GrgG8BNwHfVpkTz1A9GI6xrqObXFVW8nY4SjYRgDv9mZluPG3Cdt+LblANmn7LFyAs1AS9bfj0FfBG4yHs/A9gBbASu1LsH5OmnM+FQ+K261KvNoZLJJzyfRxf2HCB5PO2elwANnoee8CYw7wwA6WDYLQ0Vqp8BR4Fizxu2KXqBsV775RvrUzUbIrEH+rK5+WzeO93HsAfIVniH7v+iCXzbL1Ct2t6+ORBFgfd/BF4DJsrLbD+njEcm17J6OParvmyOw9C8H3SdQsMvdbh72yGzFZ5xWp1vluDPKcE3KEdcqGzCp4HPezvM2v1Anp+xtzK+oDlZ1rZz0KeuXN4e132z5j8VhgvcCyVyEBAixQdFkjXKjVZ9qwYWeYCs7T0WsmGY9+z55z7eGEsGAaGUaNL9LLfbHahveQ0X5wHk7GW1nS/W/gXwQqDNeuA7yqGbWmvK728djATb+Havd/9tH9T1+t2oYjqaGYF+D7gBuFgctlTtjdV/KU9+bSgUenRNPPHMWcbrUuqcwmE882HlC+KUQmyVuOgehe5vKjEtGMPAZSfh4SUNH1h+JBMqZDyb9+NAEpgaVU1yttm7/5gS3mqY7YbOPAPZu58A81TXjBpqBqKR+56aOP7Vg+kzACVEqhXKx8N55p0e9XgJuTEhqVGpMmKcYS7uEC2YMlij9v9QGBv1+/6uqsTtKxMVHcdOMQ2Xq5xUqQqMV4SKpLkWaRxnE6Je6LqUY00a5HcqnFbNTdSdqwk+q2L6V+BdKYX5mXBo1eqGmuv/ni6ypUzWGLZTLxHNdOh6T+VnhtSHgVuoBZ9jNBH1NI8B+LlC8KD00HQpSmvTLSLcpu17g0rP/nfHV5xYXZJ4vjed2z1JJXqtVMDDCtccXRFRwQ552AAd0LgGKhKVhEUqwDq/oQHnS7z5ZoX1TXloY3fZ2MTr1clp29LRAbI58lymsrJVSW/583V5pS4wVp3ow4Th56RAzLJRoUQoE3Ljp/MAQh3nZMKhOWsm1bRtyhQ1kc71WaekXyHgRQrN1DxjOJsir3Xqvlzvey2H/qmHkPLnk3n091YV58EtE5I8NLGWTZmifknhhLQTEnU2eJsS2rcVngOcWZhnCpyrn3sM1CY9RFVos5rImZWcS03GvDKp+rqVoTi9/5UZnQIxoLKC2hZJpbZ4Y8yVrJnhpQs6FWWVDq6YvxXWjnCy1Ab/TWA1tnNoqU3y2tCYQ977QQ26X55BO/iYVu4frbbpt1M559tSb1Hm+d1OOT4J3K/tPlPb/6v6luxOjF2/Ihy3hLzRG8xC9iHxlltUq+7rA0V9vSjmCi3EWaMuR55NeHJ2iUCVqJaVex05URy50lOObsXbVate9N47op2lXTWgwnwe8GPOtNnisxJ9yUXJFeSj2s5IxthuesQN0V8c1G65nOnShO2Bbz3iuF3eJspnyxR2d5Z8Rlx4mqxd5N0flV7Knb82lJ7GDr0SZJfLW2sCE66X0qiWgs1ntst/pNA7W+hufFCWoLfq/i7pnOe31CbZlw7vUDjWSn0eEfNv9852zjrlITuQ7gUe0yJaxeJmfxCoO735XHE+TQ47W6UB2ZeMrX08kbJ8iMgD7RJ3s+Sxq+XVoE0UkJ3yVkT9Zotu2iRV0H8N1/r984Ey77W8XxG75LflKYaGc7nRpVDWq6AaDfxUnhjJrpGOT+pQ0CZwNdrdyHsXuzQZDRTtqXj0yXiy+eRw7lTrOq9U/jSPAiSfnS959BlRTr3abBZFDAT7nHHC3ZuK01iazDKcS+Qm8dVFuqrU7P8BFlc6LPAUyXM6bee10zzVniplWem4YLubgUcDBbpDZ7o3lLzd+s8gIeBTRMJzA+rAWP6bIswR7RSovZVxGmPJkdpZHtwH3CJ9lc+yo/y3kBGQxXmK8hmWA9VVEeOxstTZ2poZ95jOMk1u+TASQDNjdzu0vmTUUggYZ6GDrxxkaWUVmRH/wsprtkMt52znmA4znWVesuJtvGUnZqv8Ft5cQS/YgP8ASV0wA2uo3nwAAAAASUVORK5CYII="
+            />
+          </svg>
+        </div>
+        <ul class="nav_menu" style="list-style: none">
+          <li>
+            <a class="nav_menu_link" href="#">TOP</a>
+          </li>
+          <li><a class="nav_menu_link" href="#">NEWS</a></li>
+          <li><a class="nav_menu_link" href="#">ABOUT</a></li>
+          <li><a class="nav_menu_link" href="#">TALENT</a></li>
+          <li><a class="nav_menu_link" href="#">SCHEDULE</a></li>
+          <li><a class="nav_menu_link" href="#">EVENTS</a></li>
+          <li><a class="nav_menu_link" href="#">VIDEOS</a></li>
+          <li><a class="nav_menu_link" href="#">MUSIC</a></li>
+          <li><a class="nav_menu_link" href="#">GOODS</a></li>
+          <li><a class="nav_menu_link" href="#">SPECIAL</a></li>
+          <li>
+            <ion-icon
+              class="backgroundmusic_icon"
+              name="musical-notes-outline"
+            ></ion-icon>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="flex-column main container">
+        <div class="main_model grid-2-column">
+          <div class="main_model_left grid-2-column">
+            <div class="main_model_left_showlist flex-column">
+              <div
+                class="relative main_model_left_showlist_box flex"
+                style="background-image: url(IMG/4.jpg)"
+              >
+                <svg
+                  class="icon_zoom"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="relative main_model_left_showlist_box flex"
+                style="background-image: url(IMG/3.jpg)"
+              >
+                <svg
+                  class="icon_zoom"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="main_model_left_charactor relative">
+              <img
+                class="middle-position"
+                src="IMG/PNG/1.png"
+                alt="himehina-img-1"
+              />
+            </div>
+          </div>
+
+          <div class="main_model_right">
+            <div class="flex-column">
+              <div>
+                <span
+                  style="color: #fd5f8a; font-size: 30px; font-weight: bold"
+                >
+                  田中ヒメ
+                </span>
+                <span
+                  style="color: #3eb8fd; font-size: 30px; font-weight: bold"
+                >
+                  鈴木ヒナ
+                </span>
+              </div>
+              <div>
+                <span style="color: #fd5f8a; font-size: 15px"
+                  >-Hime&nbsp;Tanaka-</span
+                ><span style="color: #3eb8fd; font-size: 15px"
+                  >-Hina&nbsp;Suzuki-</span
+                >
+              </div>
+            </div>
+            <div class="main_model_right_introdece">
+              <p class="main_model_right_introduce-1">
+                [気づくとぽんぽこムーブが漏れてしまう]
+              </p>
+              <p class="main_model_right_introduce-2">
+                美しいブロンドヘアーがどことなく気品を漂わせるが、極度のアニメオタク。
+                本人はおしとやかに振舞っているつもりだが、感情を叫ぶようなハイトーンの歌声が特徴。
+              </p>
+            </div>
+
+            <video
+              class="main_model_right_video"
+              autoplay
+              muted
+              loop
+              src="VIDEO/1.mp4"
+            ></video>
+            <div class="main_model_right_button-link grid-2-column">
+              <a href="https://twitter.com/HinaSuzuki_HH" class="flex relative">
+                <button
+                  class="main_model_right_button main_model_right_button-hime"
+                >
+                  Hime Tanaka
+                </button>
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="main_model_right_arr absolute"
+                >
+                </ion-icon>
+              </a>
+              <a href="https://twitter.com/himetanaka_hh" class="flex relative">
+                <button
+                  class="main_model_right_button main_model_right_button-hina"
+                >
+                  Hina Suzuki
+                </button>
+                <ion-icon
+                  style="transform: translate(-150%, -50%)"
+                  name="chevron-forward-outline"
+                  class="main_model_right_arr absolute"
+                >
+                </ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main_recommended_videos flex-column">
+          <span class="flex">Recommended Videos</span>
+          <div class="main_recommended_videos_list grid-3-column">
+            <div class="main_recommended_videos_list_box">
+              <video class="flex" autoplay muted loop src="VIDEO/6.mp4"></video>
+              <span></span>
+            </div>
+
+            <div class="main_recommended_videos_list_box">
+              <video class="flex" autoplay muted loop src="VIDEO/5.mp4"></video>
+              <span></span>
+            </div>
+            <div class="main_recommended_videos_list_box">
+              <video class="flex" autoplay muted loop src="VIDEO/7.mp4"></video>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="main_music flex-column relative">
+          <ion-icon
+            name="caret-back-outline"
+            class="absolute main_music_slide-arr-left main_music_slide-arr"
+          ></ion-icon>
+          <ion-icon
+            name="caret-forward-outline"
+            class="absolute main_music_slide-arr-right main_music_slide-arr"
+          ></ion-icon>
+          <div class="main_music_tit flex">
+            <div class="main_music_tit_text flex relative">
+              <div>
+                <span class="main_music_tit_text_1">MUSIC</span>
+                <span class="main_music_tit_text_2">リリース音源</span>
+              </div>
+
+              <button class="main_music_tit_text_but">
+                <a
+                  href="https://space.bilibili.com/296909317/video?tid=3&special_type=&pn=1&keyword=&order=pubdate"
+                >
+                  view all</a
+                >
+                <ion-icon
+                  name="caret-forward-outline"
+                  class="absolute main_music_tit_text_but_arr"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+          <ul class="main_music_container flex">
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1Eb411Y7Uk/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/renxing.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">人型</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1Xk4y1x7tj/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/www.png" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">WWW</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV12a4y1f7SR/?spm_id_from=333.788.recommend_more_video.1&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/心烦意乱three card.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">
+                  心烦意乱three card
+                </p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1aZ4y1a7wE/?spm_id_from=333.788.recommend_more_video.26&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/Hello, Hologram.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">Hello, Hologram</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1em4y1q7Dr/?spm_id_from=444.41.top_right_bar_window_history.content.click&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/GOLDEN.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">GOLDEN</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1cV411F7TG/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/MotherDRUG.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">MotherDRUG</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1z54y1w79x/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/即使那就是你的幸福.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">
+                  即使那就是你的幸福
+                </p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1r4411A77J/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/姬雏鸟.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">姬雏鸟</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1Xm4y1A7zT/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/想要相见的我们.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">想要相见的我们</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1FX4y1u7bQ/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/水洼上的轮舞.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">水洼上的轮舞</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV19J41137nm/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/泡沫啊请不要离去.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">泡沫啊请不要离去</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1k5411w7m8/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/流逝的生命.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">流逝的生命</p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV19h411r78N/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/相思相爱Reflection.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">
+                  相思相爱Reflection
+                </p>
+              </a>
+            </li>
+            <li class="main_music_container_box">
+              <a
+                class="flex-column"
+                href="https://www.bilibili.com/video/BV1hJ411C7W8/?spm_id_from=333.999.0.0&vd_source=f33074e406cf9647cf7d70eef3a31c06"
+              >
+                <figure class="main_music_container_box_imgbox">
+                  <img src="IMG/MUSICIMG/fengmian/琥珀的身体.jpg" />
+                </figure>
+                <div class="main_music_container_box_descri flex">
+                  <p>ALBUM</p>
+                  <p>ORIGINAL</p>
+                </div>
+                <p class="main_music_container_box_songtit">琥珀的身体</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <!-- <script src="himehina.js"></script> -->
+  </body>
+</html>
